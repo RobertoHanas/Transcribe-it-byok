@@ -1,6 +1,6 @@
 # Whisper Transcriber
 
-A browser-based audio transcription app powered by [OpenAI Whisper](https://platform.openai.com/docs/guides/speech-to-text). Upload any audio or video file — no matter how long — and get a timestamped transcript back in minutes.
+A browser-based audio transcription app powered by [OpenAI Whisper](https://platform.openai.com/docs/guides/speech-to-text). Upload an audio (mp3 and mp4a tested) or video (tested with 30mb video) file no matter how long (tested with 3h) and get a timestamped transcript back in minutes.
 
 **Bring your own key.** Your OpenAI API key is stored only in your browser's localStorage and sent directly to Whisper. Nothing is stored server-side.
 
@@ -8,13 +8,13 @@ A browser-based audio transcription app powered by [OpenAI Whisper](https://plat
 
 ## Features
 
-- Transcribes MP3, WAV, OGG, FLAC, WebM, and MP4/M4A files of any size
+- Transcribes MP3, WAV, OGG, FLAC, WebM, and MP4/M4A files of any size 
 - MP4/M4A container files are decoded to WAV in the browser before upload
-- Large files are split into chunks and processed in parallel — no timeouts
+- Large files are split into chunks and processed in parallel, no timeouts
 - Live progress with per-chunk status (pending / processing / completed / failed)
 - Timestamped transcript with copy-to-clipboard
 - Full history per browser session with delete
-- Failed chunks do not abort the rest of the job — partial transcripts are preserved
+- Failed chunks do not abort the rest of the job; partial transcripts are preserved
 
 ---
 
@@ -118,7 +118,7 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 
 ### 8. Use the app
 
-1. Paste your **OpenAI API key** into the field at the top — it's saved in your browser.
+1. Paste your **OpenAI API key** into the field at the top; it's saved in your browser.
 2. Drop or select an audio/video file.
 3. Click **Transcribe**.
 4. Watch chunks process in parallel. The transcript fills in as each part completes.
@@ -133,7 +133,7 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 npm run build
 ```
 
-The output goes to `dist/`. Deploy to any static host (Vercel, Netlify, Cloudflare Pages, etc.). No server required — all backend logic runs in Supabase.
+The output goes to `dist/`. Deploy to any static host (Vercel, Netlify, Cloudflare Pages, etc.). No server required, all backend logic runs in Supabase.
 
 ---
 
